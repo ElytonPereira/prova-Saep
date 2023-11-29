@@ -2,8 +2,6 @@ package br.com.senai.saep;
 
 import java.awt.EventQueue;
 
-import javax.swing.text.View;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +9,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-import br.com.senai.saep.view.ViewPrincipal;
+import br.com.senai.saep.view.ViewLogin;
 
 @SpringBootApplication
 public class SaepApplication {
@@ -26,7 +24,7 @@ public class SaepApplication {
 	}
 	
 	@Autowired
-	private ViewPrincipal viewPrincipal;
+	private ViewLogin viewLogin;
 	
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
@@ -38,7 +36,7 @@ public class SaepApplication {
 					
 					@Override
 					public void run() {
-						viewPrincipal.setVisible(true);
+						viewLogin.setVisible(true);
 						
 					}
 				});
